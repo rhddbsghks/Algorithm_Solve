@@ -8,9 +8,9 @@ import java.util.StringTokenizer;
 /*
 백준 1068 트리
 풀이법 :	자바 객체의 참조값들을 적극 활용하여 문제를 해결했습니다. 혹시 구조가 잘 이해가지 않으시면 그림판으로 설명해드리겠슴다
-			Node 클래스: <Node> 리스트인 nodeList를 가지고 자식 노드를 저장
-			tree: <Node>리스트임. 전체 트리를 구성하는 노드들을 저장하고 각 인덱스는 노드 번호를 의미한다.
-			rootList: <Node>리스트임. 부모번호가 -1, 즉 루트인 노드들을 따로 저장한다.
+	Node 클래스: <Node> 리스트인 nodeList를 가지고 자식 노드를 저장
+	tree: <Node>리스트임. 전체 트리를 구성하는 노드들을 저장하고 각 인덱스는 노드 번호를 의미한다.
+	rootList: <Node>리스트임. 부모번호가 -1, 즉 루트인 노드들을 따로 저장한다.
 			
 		  	
 시간복잡도: N은 50이하이므로 고려하지 않음.
@@ -44,7 +44,7 @@ public class BJ_1068 {
 			tree.add(newNode);
 		}
 
-		ArrayList<Node> rootList = new ArrayList<>();
+		Node root = null;
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
 		// tree에서 Node별로 부모-자식 관계 매핑해주는 작업
@@ -53,9 +53,9 @@ public class BJ_1068 {
 			int parentIdx = Integer.parseInt(st.nextToken()); // 입력값, 즉 부모 Node의 인덱스 값
 			Node curNode = tree.get(i); // tree에서 현재 Node 로드
 
-			// 부모 인덱스가 -1이면 rootList에 추가
+			// 부모 인덱스가 -1이면 root
 			if (parentIdx == -1) {
-				rootList.add(curNode);
+				root = curNode;
 				continue;
 			}
 
@@ -68,11 +68,10 @@ public class BJ_1068 {
 		int deleteNodeIdx = Integer.parseInt(br.readLine());
 		tree.remove(tree.get(deleteNodeIdx));
 
-		// rootList에 있는 루트Node들 dfs
-		for (Node r : rootList)
-			if (tree.contains(r)) // 루트가 삭제되었을 수도 있으므로 체크
-				dfs(r);
-
+		// root부터 dfs
+		if (tree.contains(root)) // 루트가 삭제되었을 수도 있으므로 체크
+			dfs(root);
+			
 		System.out.println(leafNode);
 	}
 	/****************** Main End ******************/
@@ -81,11 +80,12 @@ public class BJ_1068 {
 	
 	/****************** Method ******************/
 
-//	dfs: 자식이 없거나, 자식들이 하나라도 tree에 속해있지 않으면 leafNode++
+//	dfs: 자식으로 dfs를 호출하지 못하면 leafNode++
 	static void dfs(Node node) {
 		boolean dfsCall = false;
 
 		for (Node n : node.nodeList)
+			// 삭제된 노드인지 체크
 			if (tree.contains(n)) {
 				dfsCall = true;
 				dfs(n);
