@@ -19,7 +19,6 @@ public class BJ_1987_BitMasking {
 	static char map[][];
 	static int dr[] = { -1, 0, 1, 0 }; // 상 우 하 좌
 	static int dc[] = { 0, 1, 0, -1 };
-	static Set<Character> alphaSet;
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -30,42 +29,28 @@ public class BJ_1987_BitMasking {
 		max = 0;
 		map = new char[r][];
 		root = new int[r][c];
-		alphaSet = new HashSet<Character>(); // 탐색한 알파벳 set
 		for (int i = 0; i < r; i++)
 			map[i] = br.readLine().toCharArray();
 
-		alphaSet.add(map[0][0]);
-		dfs(0, 0, 1);
+		dfs(0, 0, 1, 1 << (map[0][0] - 'A'));
 		System.out.println(max);
 	}
 
-	static void dfs(int i, int j, int dist) {
-		// 이동경로 체크에 현재 거리 저장
-		root[i][j] = dist;
+	static void dfs(int i, int j, int cnt, int bit) {
+		root[i][j] = bit;
+		max = Math.max(cnt, max);
 
-		boolean dfsCall = false;
 		for (int d = 0; d < 4; d++) {
 			int nr = i + dr[d];
 			int nc = j + dc[d];
 
-			if (isValid(nr, nc)) {
-				dfsCall = true;
-				alphaSet.add(map[nr][nc]);
-				dfs(nr, nc, dist + 1);
-			}
+			if (isValid(nr, nc) && (bit & (1 << map[nr][nc] - 'A')) == 0)
+				dfs(nr, nc, cnt + 1, bit | (1 << map[nr][nc] - 'A'));
 		}
-
-		// dfs 호출을 못했으면 마지막 점이므로 max 거리 갱신
-		if (!dfsCall && dist > max)
-			max = dist;
-
-		// 왔던 점 초기화 및 알파벳 set에서 빼주기
-		root[i][j] = 0;
-		alphaSet.remove(map[i][j]);
 	}
 
 	static boolean isValid(int i, int j) {
-		if (0 <= i && i < r && 0 <= j && j < c && root[i][j] == 0 && !alphaSet.contains(map[i][j]))
+		if (0 <= i && i < r && 0 <= j && j < c)
 			return true;
 		return false;
 	}
