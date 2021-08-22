@@ -15,7 +15,7 @@ import java.util.StringTokenizer;
  */
 
 public class BJ_1987_BitMasking {
-	static int r, c, max, root[][];
+	static int r, c, max, visited[][];
 	static char map[][];
 	static int dr[] = { -1, 0, 1, 0 }; // 상 우 하 좌
 	static int dc[] = { 0, 1, 0, -1 };
@@ -28,7 +28,7 @@ public class BJ_1987_BitMasking {
 		c = Integer.parseInt(st.nextToken());
 		max = 0;
 		map = new char[r][];
-		root = new int[r][c];
+		visited = new int[r][c];
 		for (int i = 0; i < r; i++)
 			map[i] = br.readLine().toCharArray();
 
@@ -37,7 +37,10 @@ public class BJ_1987_BitMasking {
 	}
 
 	static void dfs(int i, int j, int cnt, int bit) {
-		root[i][j] = bit;
+		if (visited[i][j] == bit)
+			return;
+
+		visited[i][j] = bit;
 		max = Math.max(cnt, max);
 
 		for (int d = 0; d < 4; d++) {
