@@ -25,7 +25,7 @@ import java.util.StringTokenizer;
  */
 
 
-public class BJ_1753 {
+public class BJ_11657 {
 
 	// Edge 클래스: 간선 정보 클래스
 	static class Edge {
