@@ -16,7 +16,6 @@ import java.util.*;
 		 
  */
 
-
 public class BJ_1600 {
 
 	static int k, w, h, map[][];
@@ -25,10 +24,6 @@ public class BJ_1600 {
 	static int[] hr = { -2, -2, 2, 2, -1, 1, -1, 1 };
 	static int[] hc = { -1, 1, -1, 1, -2, -2, 2, 2 };
 	static int[][][] visited;
-
-	static final int HORSE = 0;
-	static final int R = 1;
-	static final int C = 2;
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -39,7 +34,7 @@ public class BJ_1600 {
 		w = Integer.parseInt(st.nextToken());
 		h = Integer.parseInt(st.nextToken());
 		map = new int[h][w];
-		visited = new int[k + 1][h][w];
+		visited = new int[k + 1][h][w]; // 0~k번 말을 사용한 map, 총 k+1개
 
 		for (int i = 0; i < h; i++) {
 			st = new StringTokenizer(br.readLine());
@@ -47,43 +42,52 @@ public class BJ_1600 {
 				map[i][j] = Integer.parseInt(st.nextToken());
 		}
 
-		int[] start = new int[] { 0, 0, 0 };
+		int[] start = new int[] { 0, 0, 0 }; // (0,0)까지 말을 0번 씀
 		Queue<int[]> q = new ArrayDeque<int[]>();
 		q.offer(start);
 
+		// 시작점 넣고 BFS 시작
 		while (!q.isEmpty()) {
 			int current[] = q.poll();
-			
-			if (current[R] == h - 1 && current[C] == w - 1) {
-				System.out.println(visited[current[HORSE]][current[R]][current[C]]);
+			int horse = current[0];
+			int r = current[1];
+			int c = current[2];
+
+			// 목적지 좌표면 해당하는 말 사용횟수에 해당하는 visited map을 참조해 경로 출력
+			if (r == h - 1 && c == w - 1) {
+				System.out.println(visited[horse][r][c]);
 				return;
 			}
 
+			// 4방 탐색
 			for (int d = 0; d < 4; d++) {
-				int nr = current[R] + dr[d];
-				int nc = current[C] + dc[d];
+				int nr = r + dr[d];
+				int nc = c + dc[d];
 
-				if (nr < 0 || nc < 0 || nr >= h || nc >= w || map[nr][nc] == 1 || visited[current[HORSE]][nr][nc] != 0)
+				if (nr < 0 || nc < 0 || nr >= h || nc >= w || map[nr][nc] == 1 || visited[horse][nr][nc] != 0)
 					continue;
 
-				visited[current[HORSE]][nr][nc] = visited[current[HORSE]][current[R]][current[C]] + 1;
-				q.offer(new int[] { current[HORSE], nr, nc });
+				// 현재 좌표의 말 사용횟수에 해당하는 visited[][]를 업데이트
+				// 말을 사용하지 않았으므로 현재 좌표와 같은 visited[][]임
+				visited[horse][nr][nc] = visited[horse][r][c] + 1;
+				q.offer(new int[] { horse, nr, nc });
 			}
 
-			if (current[HORSE] < k)
+			// 아직 말 사용 횟수가 남았으면 8방탐색
+			if (horse < k)
 				for (int d = 0; d < 8; d++) {
-					int nr = current[R] + hr[d];
-					int nc = current[C] + hc[d];
+					int nr = r + hr[d];
+					int nc = c + hc[d];
 
-					if (nr < 0 || nc < 0 || nr >= h || nc >= w || map[nr][nc] == 1
-							|| visited[current[HORSE] + 1][nr][nc] != 0)
+					if (nr < 0 || nc < 0 || nr >= h || nc >= w || map[nr][nc] == 1 || visited[horse + 1][nr][nc] != 0)
 						continue;
 
-					visited[current[HORSE] + 1][nr][nc] = visited[current[HORSE]][current[R]][current[C]] + 1;
-					q.offer(new int[] { current[HORSE] + 1, nr, nc });
+					visited[horse + 1][nr][nc] = visited[horse][r][c] + 1;
+					q.offer(new int[] { horse + 1, nr, nc });
 				}
 		}
-
+		
+		// 목적지 좌표에 도달하지 못했다면
 		System.out.println(-1);
 	}
 }
