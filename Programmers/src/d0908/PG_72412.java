@@ -2,17 +2,6 @@ package d0908;
 
 import java.util.*;
 
-/*
-프로그래머스 72412 순위 검색
-
-풀이법 : 
-	info를 파싱하여 각 Set에 인덱서 값들을 저장해둡니다.
-	이후 쿼리를 하나 가져오고 info의 모든 인덱스 Set을 탐색하여 마지막으로 스코어까지 비교해줍니다.
-		 
-이게 3번째 방법인데 뭔 짓을 해도 효율성은 못 뚫네요...
-결국 O(N^2)이라 큰 차이가 없었던 것 같네요.
- */
-
 public class PG_72412 {
 
 	public static void main(String[] args) {
@@ -27,118 +16,57 @@ public class PG_72412 {
 
 	}
 
-	static String[][] info;
-	static String[][] query;
-	static int result;
+	static Map<String, ArrayList<Integer>> infoMap;
 
-	// 매개변수를 전역으로 쓰려고 이름을 수정했습니다.
-	static int[] solution(String[] inf, String[] q) {
-		// 입력 값을 전역 변수로 사용
-		info = new String[inf.length][];
-		query = new String[q.length][5];
-		int[] answer = new int[q.length];
+	static int[] solution(String[] info, String[] query) {
 
-		Map<String, Set<Integer>> cache = new HashMap<>();
+		infoMap = new HashMap<>();
+		int[] answer = new int[query.length];
 
-		Set<Integer> cpp = new HashSet<>();
-		Set<Integer> java = new HashSet<>();
-		Set<Integer> python = new HashSet<>();
+		for (int i = 0; i < info.length; i++)
+			dfs(0, info[i].split(" "), "");
 
-		Set<Integer> backend = new HashSet<>();
-		Set<Integer> frontend = new HashSet<>();
+		for (String key : infoMap.keySet())
+			Collections.sort(infoMap.get(key));
 
-		Set<Integer> junior = new HashSet<>();
-		Set<Integer> senior = new HashSet<>();
+		for (int i = 0; i < query.length; i++) {
+			String[] input = query[i].replace(" and", "").split(" ");
+			String keyword = input[0] + input[1] + input[2] + input[3];
+			int score = Integer.parseInt(input[4]);
 
-		Set<Integer> pizza = new HashSet<>();
-		Set<Integer> chicken = new HashSet<>();
-
-		cache.put("cpp", cpp);
-		cache.put("java", java);
-		cache.put("python", python);
-		cache.put("backend", backend);
-		cache.put("frontend", frontend);
-		cache.put("junior", junior);
-		cache.put("senior", senior);
-		cache.put("pizza", pizza);
-		cache.put("chicken", chicken);
-
-		StringTokenizer st;
-
-		// info 파싱
-		for (int i = 0; i < inf.length; i++) {
-			info[i] = inf[i].split(" ");
-
-			if (info[i][0].equals("cpp"))
-				cpp.add(i);
-			else if (info[i][0].equals("java"))
-				java.add(i);
-			else
-				python.add(i);
-
-			if (info[i][1].equals("backend"))
-				backend.add(i);
-			else
-				frontend.add(i);
-
-			if (info[i][2].equals("junior"))
-				junior.add(i);
-			else
-				senior.add(i);
-
-			if (info[i][3].equals("pizza"))
-				pizza.add(i);
-			else
-				chicken.add(i);
-		}
-
-		// 쿼리 한줄 파싱
-		for (int i = 0; i < q.length; i++) {
-			st = new StringTokenizer(q[i], " ");
-
-			for (int j = 0; j < 4; j++) {
-				if (j != 3) {
-					query[i][j] = st.nextToken();
-					st.nextToken(); // and 버리기
-					continue;
-				}
-
-				// 마지막 음식과 점수
-				query[i][3] = st.nextToken();
-				query[i][4] = st.nextToken();
+			if (!infoMap.containsKey(keyword)) {
+				answer[i] = 0;
+				continue;
 			}
 
-			result = 0;
+			ArrayList<Integer> scoreList = infoMap.get(keyword);
+			int start = 0;
+			int end = scoreList.size() - 1;
 
-			for (int idx = 0; idx < info.length; idx++) {
-				String language = query[i][0];
-				String job = query[i][1];
-				String career = query[i][2];
-				String food = query[i][3];
-				int score = Integer.parseInt(query[i][4]);
-				boolean langFlag = false;
-				boolean jobFlag = false;
-				boolean careerFlag = false;
-				boolean foodFlag = false;
+			while (start <= end) {
+				int mid = (start + end) / 2;
 
-				if (query[i][0].equals("-") || cache.get(language).contains(idx))
-					langFlag = true;
-
-				if (query[i][1].equals("-") || cache.get(job).contains(idx))
-					jobFlag = true;
-
-				if (query[i][2].equals("-") || cache.get(career).contains(idx))
-					careerFlag = true;
-
-				if (query[i][3].equals("-") || cache.get(food).contains(idx))
-					foodFlag = true;
-
-				// 모든 flag를 통과하면 스코어 비교
-				if (langFlag && jobFlag && careerFlag && foodFlag && Integer.parseInt(info[idx][4]) >= score)
-					result++;
+				if (scoreList.get(mid) < score)
+					start = mid + 1;
+				else
+					end = mid - 1;
 			}
-			answer[i] = result;
+			answer[i] = scoreList.size() - start;
 		}
 		return answer;
+	}
+
+	static void dfs(int index, String[] input, String output) {
+		if (index == 4) {
+			int score = Integer.parseInt(input[4]);
+
+			if (!infoMap.containsKey(output))
+				infoMap.put(output, new ArrayList<Integer>());
+
+			infoMap.get(output).add(score);
+			return;
+		}
+		dfs(index + 1, input, output + input[index]);
+		dfs(index + 1, input, output + "-");
 	}
 }
