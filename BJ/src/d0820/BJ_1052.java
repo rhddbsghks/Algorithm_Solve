@@ -30,6 +30,6 @@ public class BJ_1052 {
 				break;
 		}
 
-		System.out.println(cnt);
+		System.out.println(cnt); 
 	}
 }
