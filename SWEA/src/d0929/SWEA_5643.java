@@ -15,9 +15,10 @@ public class SWEA_5643 {
 		}
 	}
 
-	static Node[] friendsU, friendsD;
+	static Node[] friends;
 	static int[] upper, lower;
 	static boolean[] visited;
+	static int call;
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -26,8 +27,7 @@ public class SWEA_5643 {
 		for (int t = 1; t <= testcase; t++) {
 			int n = Integer.parseInt(br.readLine());
 			int m = Integer.parseInt(br.readLine());
-			friendsU = new Node[n + 1];
-			friendsD = new Node[n + 1];
+			friends = new Node[n + 1];
 			upper = new int[n + 1];
 			lower = new int[n + 1];
 			visited = new boolean[n + 1];
@@ -38,15 +38,14 @@ public class SWEA_5643 {
 				StringTokenizer st = new StringTokenizer(br.readLine());
 				int from = Integer.parseInt(st.nextToken());
 				int to = Integer.parseInt(st.nextToken());
-				friendsU[from] = new Node(to, friendsU[from]);
-				friendsD[to] = new Node(from, friendsD[to]);
+				friends[from] = new Node(to, friends[from]);
 			}
 
 			for (int i = 1; i <= n; i++) {
 				Arrays.fill(visited, false);
-				dfsU(i);
-				Arrays.fill(visited, false);
-				dfsD(i);
+				call = -1;
+				dfs(i);
+				upper[i]=call;
 			}
 
 			int result = 0;
@@ -57,23 +56,14 @@ public class SWEA_5643 {
 		}
 	}
 
-	static void dfsU(int num) {
+	static void dfs(int num) {
 		if (visited[num])
 			return;
 		visited[num] = true;
 		lower[num]++;
+		call++;
 
-		for (Node cur = friendsU[num]; cur != null; cur = cur.link)
-			dfsU(cur.to);
-	}
-
-	static void dfsD(int num) {
-		if (visited[num])
-			return;
-		visited[num] = true;
-		upper[num]++;
-
-		for (Node cur = friendsD[num]; cur != null; cur = cur.link)
-			dfsD(cur.to);
+		for (Node cur = friends[num]; cur != null; cur = cur.link)
+			dfs(cur.to);
 	}
 }
