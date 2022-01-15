@@ -111,7 +111,29 @@
 
 ## KAKAO
 
-| 레벨 |            문제            |  제목  |
-| :--: | :------------------------: | :----: |
-|  2   | [2020 카카오 인턴십](https://programmers.co.kr/learn/courses/30/lessons/67256) | 키패드 누르기 |
-|  4   | [2563](http://noj.am/2563) | 색종이 |
+| 레벨 |                                            문제                                            |        제목        |
+| :--: | :----------------------------------------------------------------------------------------: | :----------------: |
+|  4   |  [2019 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/42891)  | 무지의 먹방 라이브 |
+|  3   | [2021 카카오 채용연계형 인턴십](https://programmers.co.kr/learn/courses/30/lessons/81303)  |      표 편집       |
+|  3   |  [2021 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/72413)  |   합승 택시 요금   |
+|  3   |  [2021 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/72414)  |     광고 삽입      |
+|  3   |  [2021 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/72415)  |   카드 짝 맞추기   |
+|  3   |  [2020 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/60059)  |   자물쇠와 열쇠    |
+|  3   |  [2020 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/60061)  |   기둥과 보 설치   |
+|  3   |  [2020 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/60062)  |     외벽 점검      |
+|  3   |  [2020 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/60063)  |   블록 이동하기    |
+|  3   |  [2019 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/42892)  |    길 찾기 게임    |
+|  3   |  [2019 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/42893)  |     매칭 점수      |
+|  3   | [2019 카카오 개발자 겨울 인턴십](https://programmers.co.kr/learn/courses/30/lessons/64062) |  징검다리 건너기   |
+|  3   | [2019 카카오 개발자 겨울 인턴십](https://programmers.co.kr/learn/courses/30/lessons/64064) |    불량 사용자     |
+|  3   |  [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/17676)  |    추석 트래픽     |
+|  3   |  [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/17678)  |      셔틀버스      |
+|  3   |      [2017 카카오코드 예선](https://programmers.co.kr/learn/courses/30/lessons/1832)       |    보행자 천국     |
+|  2   |  [2021 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/72412)  |      순위검색      |
+|  2   |       [2020 카카오 인턴십](https://programmers.co.kr/learn/courses/30/lessons/67258)       |     보석 쇼핑      |
+|  2   |       [2020 카카오 인턴십](https://programmers.co.kr/learn/courses/30/lessons/67259)       |    경주로 건설     |
+|  2   |       [2020 카카오 인턴십](https://programmers.co.kr/learn/courses/30/lessons/67256)       |   키패드 누르기    |
+|  2   | [2019 카카오 개발자 겨울 인턴십](https://programmers.co.kr/learn/courses/30/lessons/64065) |        튜플        |
+|  2   |  [2019 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/42888)  |     오픈채팅방     |
+|  2   |  [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/17687)  |     n진수 게임     |
+|  2   |  [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/17683)  |     n진수 게임     |
