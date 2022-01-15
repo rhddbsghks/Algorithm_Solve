@@ -7,28 +7,86 @@
 
 ## Gold
 
-|                                 레벨                                  |             번호              |     제목      |
-| :-------------------------------------------------------------------: | :---------------------------: | :-----------: |
-| <img src="https://static.solved.ac/tier_small/13.svg" height="18px"/> |  [1918](http://noj.am/1918)   |  후위 표기식  |
-| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [17406](http://noj.am/17406)  | 배열 돌리기 4 |
-| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [115596](http://noj.am/11559) |   Puyo Puyo   |
-| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [17135](http://noj.am/17135)  |  캐슬 디펜스  |
-| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> |  [1339](http://noj.am/1339)   |   단어 수학   |
-| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> |  [1068](http://noj.am/1068)   |     트리      |
-| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> |  [2493](http://noj.am/2493)   |      탑       |
-| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> |  [3190](http://noj.am/3190)   |      뱀       |
-| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [15686](http://noj.am/15686)  |   치킨 배달   |
+|                                 레벨                                  |             번호              |           제목            |
+| :-------------------------------------------------------------------: | :---------------------------: | :-----------------------: |
+| <img src="https://static.solved.ac/tier_small/15.svg" height="18px"/> |  [1194](http://noj.am/1194)   |   달이 차오른다, 가자.    |
+| <img src="https://static.solved.ac/tier_small/15.svg" height="18px"/> | [21611](http://noj.am/21611)  |  마법사 상어와 블리자드   |
+| <img src="https://static.solved.ac/tier_small/15.svg" height="18px"/> | [13460](http://noj.am/13460)  |        구슬 탈출 2        |
+| <img src="https://static.solved.ac/tier_small/15.svg" height="18px"/> |  [1162](http://noj.am/1162)   |         도로포장          |
+| <img src="https://static.solved.ac/tier_small/14.svg" height="18px"/> |  [3109](http://noj.am/3109)   |           빵집            |
+| <img src="https://static.solved.ac/tier_small/14.svg" height="18px"/> | [17472](http://noj.am/17472)  |       다리 만들기 2       |
+| <img src="https://static.solved.ac/tier_small/14.svg" height="18px"/> |  [3687](http://noj.am/3687)   |         성냥개비          |
+| <img src="https://static.solved.ac/tier_small/14.svg" height="18px"/> |  [1300](http://noj.am/1300)   |         K번째 수          |
+| <img src="https://static.solved.ac/tier_small/14.svg" height="18px"/> | [19236](http://noj.am/19236)  |        청소년 상어        |
+| <img src="https://static.solved.ac/tier_small/14.svg" height="18px"/> | [12100](http://noj.am/12100)  |        2048 (Easy)        |
+| <img src="https://static.solved.ac/tier_small/13.svg" height="18px"/> |  [1918](http://noj.am/1918)   |        후위 표기식        |
+| <img src="https://static.solved.ac/tier_small/13.svg" height="18px"/> | [13904](http://noj.am/13904)  |           과제            |
+| <img src="https://static.solved.ac/tier_small/13.svg" height="18px"/> |  [1774](http://noj.am/1774)   |      우주신과의 교감      |
+| <img src="https://static.solved.ac/tier_small/13.svg" height="18px"/> | [11066](http://noj.am/11066)  |        파일 합치기        |
+| <img src="https://static.solved.ac/tier_small/13.svg" height="18px"/> | [14391](http://noj.am/14391)  |         종이 조각         |
+| <img src="https://static.solved.ac/tier_small/13.svg" height="18px"/> | [19237](http://noj.am/19237)  |         어른 상어         |
+| <img src="https://static.solved.ac/tier_small/13.svg" height="18px"/> |  [1941](http://noj.am/1941)   |       소문난 칠공주       |
+| <img src="https://static.solved.ac/tier_small/13.svg" height="18px"/> | [13459](http://noj.am/13459)  |         구슬 탈출         |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [17406](http://noj.am/17406)  |       배열 돌리기 4       |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [115596](http://noj.am/11559) |         Puyo Puyo         |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [17471](http://noj.am/17471)  |        게리맨더링         |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> |  [1600](http://noj.am/1600)   |    말이 되고픈 원숭이     |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> |  [1707](http://noj.am/1707)   |        이분 그래프        |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [17135](http://noj.am/17135)  |        캐슬 디펜스        |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> |  [1987](http://noj.am/1987)   |          알파벳           |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [17144](http://noj.am/17144)  |      미세먼지 안녕!       |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [11657](http://noj.am/11657)  |         타임머신          |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> |  [4386](http://noj.am/4386)   |       별자리 만들기       |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> |  [1339](http://noj.am/1339)   |         단어 수학         |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> |  [1062](http://noj.am/1062)   |          가르침           |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> |  [4485](http://noj.am/4485)   | 녹색 옷 입은 애가 젤다지? |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [16236](http://noj.am/16236)  |         아기 상어         |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [15961](http://noj.am/15961)  |         회전 초밥         |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [17281](http://noj.am/17281)  |            ⚾             |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> |  [3980](http://noj.am/3980)   |         선발 명단         |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> |  [2339](http://noj.am/2239)   |          스도쿠           |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> |  [1520](http://noj.am/1520)   |         내리막 길         |
+| <img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [20058](http://noj.am/20058)  | 마법사 상어와 파이어스톰  |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> |  [1068](http://noj.am/1068)   |           트리            |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> |  [2493](http://noj.am/2493)   |            탑             |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> |  [3190](http://noj.am/3190)   |            뱀             |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [15686](http://noj.am/15686)  |         치킨 배달         |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [14502](http://noj.am/14502)  |          연구소           |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [14503](http://noj.am/14503)  |        로봇청소기         |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [12865](http://noj.am/12865)  |        평범한 배낭        |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [14719](http://noj.am/14719)  |           빗물            |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> |  [2636](http://noj.am/2636)   |           치즈            |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [17070](http://noj.am/17070)  |      파이프 옮기기 1      |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [14500](http://noj.am/14500)  |        테트로미노         |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [15683](http://noj.am/15683)  |           감시            |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> |  [1759](http://noj.am/1759)   |        암호 만들기        |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [10282](http://noj.am/10282)  |           해킹            |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> |  [1753](http://noj.am/1753)   |         최단경로          |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [20002](http://noj.am/20002)  |         사과나무          |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> |  [2467](http://noj.am/2467)   |           용액            |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> |  [1245](http://noj.am/1245)   |         농장관리          |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> |  [2110](http://noj.am/2110)   |        공유기 설치        |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> |  [2212](http://noj.am/2212)   |           센서            |
+| <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [16234](http://noj.am/16234)  |         인구 이동         |
 
 ## Silver
 
 |                                 레벨                                  |             번호             |       제목        |
 | :-------------------------------------------------------------------: | :--------------------------: | :---------------: |
+| <img src="https://static.solved.ac/tier_small/10.svg" height="18px"/> |  [1052](http://noj.am/1052)  |       물병        |
+| <img src="https://static.solved.ac/tier_small/10.svg" height="18px"/> |  [1149](http://noj.am/1149)  |      RGB거리      |
+| <img src="https://static.solved.ac/tier_small/10.svg" height="18px"/> |  [7576](http://noj.am/7576)  |      토마토       |
 | <img src="https://static.solved.ac/tier_small/10.svg" height="18px"/> |  [5639](http://noj.am/5639)  |  이진 검색 트리   |
+| <img src="https://static.solved.ac/tier_small/10.svg" height="18px"/> |  [1992](http://noj.am/1992)  |     쿼드트리      |
 | <img src="https://static.solved.ac/tier_small/10.svg" height="18px"/> |  [1697](http://noj.am/1697)  |     숨바꼭질      |
 | <img src="https://static.solved.ac/tier_small/9.svg" height="18px"/>  | [16926](http://noj.am/16926) |   배열 돌리기 1   |
+| <img src="https://static.solved.ac/tier_small/9.svg" height="18px"/>  |  [1260](http://noj.am/1260)  |     DFS와 BFS     |
 | <img src="https://static.solved.ac/tier_small/9.svg" height="18px"/>  | [18870](http://noj.am/18870) |     좌표 압축     |
 | <img src="https://static.solved.ac/tier_small/9.svg" height="18px"/>  |  [1541](http://noj.am/1541)  |   잃어버린 괄호   |
-| <img src="https://static.solved.ac/tier_small/7.svg" height="18px"/>  |  [1244](http://noj.am/1244)  | 스위치 켜고 끄기  |
+| <img src="https://static.solved.ac/tier_small/9.svg" height="18px"/>  |  [1541](http://noj.am/1541)  |   잃어버린 괄호   |
+| <img src="https://static.solved.ac/tier_small/8.svg" height="18px"/>  | [11399](http://noj.am/11399) |        ATM        |
+| <img src="https://static.solved.ac/tier_small/8.svg" height="18px"/>  |  [1463](http://noj.am/1463)  |    1로 만들기     |
+| <img src="https://static.solved.ac/tier_small/8.svg" height="18px"/>  |  [2630](http://noj.am/2630)  |   색종이 만들기   |
 | <img src="https://static.solved.ac/tier_small/7.svg" height="18px"/>  |  [1764](http://noj.am/1764)  |      듣보잡       |
 | <img src="https://static.solved.ac/tier_small/7.svg" height="18px"/>  |  [9012](http://noj.am/9012)  |       괄호        |
 | <img src="https://static.solved.ac/tier_small/7.svg" height="18px"/>  |  [1205](http://noj.am/1205)  |    등수 구하기    |
@@ -42,6 +100,18 @@
 |                                 레벨                                 |            번호            |          제목           |
 | :------------------------------------------------------------------: | :------------------------: | :---------------------: |
 | <img src="https://static.solved.ac/tier_small/5.svg" height="18px"/> | [2563](http://noj.am/2563) |         색종이          |
+| <img src="https://static.solved.ac/tier_small/5.svg" height="18px"/> | [2851](http://noj.am/2851) |       슈퍼 마리오       |
 | <img src="https://static.solved.ac/tier_small/5.svg" height="18px"/> | [2999](http://noj.am/2999) |       비밀 이메일       |
 | <img src="https://static.solved.ac/tier_small/5.svg" height="18px"/> | [3985](http://noj.am/3985) |        롤 케이크        |
 | <img src="https://static.solved.ac/tier_small/4.svg" height="18px"/> | [3040](http://noj.am/3040) | 백설 공주와 일곱 난쟁이 |
+
+<br>
+
+# Programmers
+
+## KAKAO
+
+| 레벨 |            번호            |  제목  |
+| :--: | :------------------------: | :----: |
+|  4   | [2563](http://noj.am/2563) | 색종이 |
+|  4   | [2563](http://noj.am/2563) | 색종이 |
