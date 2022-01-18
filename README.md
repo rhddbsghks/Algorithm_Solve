@@ -1,5 +1,5 @@
 <!-- Bronze : 5(1), 4(2), 3(3), 2(4), 1(5) -->
-<!-- Silver : 5(6), 4(7), 3(8), 2(9), 1(10) --> 
+<!-- Silver : 5(6), 4(7), 3(8), 2(9), 1(10) -->
 <!-- Gold : 5(11), 4(12), 3(13), 2(14), 1(15) -->
 <!-- <img src="https://static.solved.ac/tier_small/*LEVEL*.svg" height="18px" /> | [*NO*](http://noj.am/*NO*) | *TITLE* -->
 
