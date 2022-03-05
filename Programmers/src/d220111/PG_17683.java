@@ -21,7 +21,7 @@ public class PG_17683 {
         // 패턴 변환
         m = m
                 .replaceAll("C#", "c")
-                .replaceAll("D#", "d")
+                .replaceAll("D#", "d220305")
                 .replaceAll("F#", "f")
                 .replaceAll("G#", "g")
                 .replaceAll("A#", "a");
@@ -36,7 +36,7 @@ public class PG_17683 {
             // 곡 멜로디 변환
             melody = melody
                     .replaceAll("C#", "c")
-                    .replaceAll("D#", "d")
+                    .replaceAll("D#", "d220305")
                     .replaceAll("F#", "f")
                     .replaceAll("G#", "g")
                     .replaceAll("A#", "a");
