@@ -12,7 +12,7 @@ import java.util.*;
 
  */
 
-public class BJ_11082 {
+public class BJ_11085 {
 
     static int p, w, c, v, answer;
     static boolean[] visited;
