@@ -43,7 +43,7 @@ public class BJ_20056 {
 
         FireBallInfo() {
             q = new ArrayDeque<>();
-        }
+    }
     }
 
     public static void main(String[] args) throws Exception {

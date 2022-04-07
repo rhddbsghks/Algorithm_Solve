@@ -21,7 +21,7 @@ public class PG_12920 {
             return n;
         }
 
-        int left = 0;
+        int left = 1;
         int right = cores[0] * n;
 
         while (left <= right) {
