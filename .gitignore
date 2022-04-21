@@ -12,3 +12,8 @@ SWEA/src/A/*
 out/
 
 CodingTest
+
+.recommenders/
+BJ/.classpath
+BJ/.gitignore
+BJ/.project
